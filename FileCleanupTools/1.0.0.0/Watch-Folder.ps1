@@ -19,7 +19,7 @@ param(
 )
 
 $Timer = [System.Diagnostics.Stopwatch]::StartNew()
-
+$ActionLog = "c:\temp\action.log"
 if (Test-Path $WatcherLog) {
     $logDate = Get-Content $WatcherLog -Raw
     try {
@@ -45,7 +45,7 @@ foreach($file in $sorted) {
     $Arguments = "-file ""$ActionScript""",
         "-FilePath ""$($file.FullName)""",
         "-Destination ""$($Destination)""",
-        "-LogPath ""$($ActionsLog)"""
+        "-LogPath ""$($ActionLog)"""
 
     $jobParams = @{
         FilePath     = 'pwsh'
