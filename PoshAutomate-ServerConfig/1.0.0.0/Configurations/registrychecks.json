@@ -1,0 +1,46 @@
+[
+  {
+    "KeyPath": "HKLM:\\System\\CurrentControlSet\\Services\\LanmanServer\\Parameters",
+    "Tests": [
+      {
+        "value": "1",
+        "operator": "ge"
+      }
+    ],
+    "Name": "EnableSecuritySignature"
+  },
+  {
+    "KeyPath": "HKLM:\\System\\CurrentControlSet\\Services\\LanmanServer\\Parameters",
+    "Tests": [
+      {
+        "value": "32768",
+        "operator": "ge"
+      }
+    ],
+    "Name": "MaxSize"
+  },
+  {
+    "KeyPath": "HKLM:\\System\\CurrentControlSet\\Services\\LanmanServer\\Parameters",
+    "Tests": [
+      {
+        "value": "1..15",
+        "operator": "in"
+      }
+    ],
+    "Name": "AutoDisconnect"
+  },
+  {
+    "KeyPath": "HKLM:\\System\\CurrentControlSet\\Services\\LanmanServer\\Parameters",
+    "Tests": [
+      {
+        "value": "1",
+        "operator": "eq"
+      },
+      {
+        "value": "$null",
+        "operator": "eq"
+      }
+    ],
+    "Name": "EnableForcedLogoff"
+  }
+]
